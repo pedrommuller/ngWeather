@@ -1,0 +1,55 @@
+
+<div ng-controller="MainCtrl as vm">
+  <div class="center-text"> 
+    <span class="big-headline">Best place to get the current weather</span>
+    <span class="middle-headline">Easy, without any complication</span>  
+  </div>
+
+  <input class="appBtn" ng-if="!vm.displayCityTextbox" type="button" click-and-disable="vm.getWeatherFromBrowser()" value="Let me guess your location" />
+
+  <div class="error-message center-text" ng-if="vm.errorMessage && !vm.displayCityTextbox">
+    <span ng-bind="vm.errorMessage"> </span>
+    <a class="hand" ng-click="vm.setDisplayCity(true)"> Would you like to enter your location manually?</a>
+  </div>
+  
+  <div id="cityTextBox" ng-if="vm.displayCityTextbox">
+    <div class="box-left">
+      <div>Type your city</div>
+      <div id="actions" class="aligner">
+        <input vs-google-autocomplete="{ types:['(cities)'] }"
+                     ng-model="vm.location.city" 
+                     vs-latitude="vm.location.lat"
+                     vs-longitude="vm.location.long"
+                     type="text" 
+                     name="city"
+                     id="city"
+                     class="appInput" 
+                     placeholder="Type your city, Ex: london">
+    </div>
+    <div class="box-right">
+      <input class="appBtn" type="button"  click-and-disable="vm.getWeatherFromTxt()" value="Find" />
+      <a class="align-right" ng-click="vm.setDisplayCity(false)">Cancel</a>
+    </div>
+    </div>
+    
+  </div>
+
+  <div ng-if="vm.info.location">
+    <div class="aligner location-results">
+      <img ng-src="{{vm.info.icon}}">
+      <div id="locationName" ng-bind="vm.info.location"></div>
+    </div>
+   
+    <ul id="item-results">
+      <li><strong>Humidity: </strong>{{vm.info.main.humidity}}</li>
+      <li><strong>Pressure: </strong>{{vm.info.main.pressure}}</li>
+      <li><strong>Sea level : </strong>{{vm.info.main.sea_level}}</li>
+      <li><strong>Temperature : </strong>{{vm.info.main.temp}}</li>
+      <li><strong>Temp max: </strong>{{vm.info.main.temp_max}}</li>
+      <li><strong>Temp min: </strong>{{vm.info.main.temp_min}}</li>
+    </ul>
+    
+     <a class="hand lnk" ng-click="vm.setDisplayCity(true)"> Would you like to enter your location manually?</a>
+  </div>
+
+</div>

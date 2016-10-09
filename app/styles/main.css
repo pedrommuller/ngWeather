@@ -1,0 +1,282 @@
+
+html {
+    font-size:62.5%;
+}
+
+body{
+ font-size:1.4rem;
+}
+/**{
+  border:1px solid black;
+}*/
+
+.default-cover { 
+  background: url(../images/background-06.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.aligner-item {
+  max-width: 50%;
+}
+
+.aligner-item--top {
+  align-self: flex-start;
+}
+
+.aligner-item--bottom {
+  align-self: flex-end;
+}
+
+.big-headline{
+  font-size:2.2rem;
+  line-height: 1;
+  display: block;
+}
+
+.middle-headline{
+  font-size:1.6rem;
+  display: block;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: roboto, arial;
+  color: #FFF;
+}
+
+.flex-auto{
+    flex: 1;
+}
+
+.center-text{
+  text-align:   center; 
+}
+
+.hidden{
+  display:  none;
+}
+
+.appBtn{
+    color: #FFF;
+    background-color: #37a000;
+    border: 1px solid #379606;
+    border-radius: 3px;
+    display:  block;  
+    margin-left: auto;
+}
+
+.appInput{
+   padding:10px;
+}
+
+.error-message{
+   color: #d8000c;
+   background-color: #ffbaba;    
+   border: 1px solid #d8000c;
+}
+
+.error-message span{
+  display: block;
+}
+
+.error-message a{
+  font-size: 1.1rem;
+  color: #bd4722;
+}
+
+.hand{
+  cursor:pointer;
+}
+
+#locationName{
+  text-align: center;
+  display: block;
+  padding: 10px;
+}
+
+.footer{
+  width: 100%;
+  position: fixed;
+  height: 50px;
+  bottom: 0;
+  text-align: right;
+  background-color: rgba(0,0,0,.5);
+  -webkit-align-items: center;
+  align-items: center;
+      padding-top: 16px;
+}
+
+#item-results {
+  list-style: none;
+  padding: 0;    
+  margin: 20px auto;
+  max-width: 170px;
+}
+#item-results li strong {
+    min-width: 100px;
+    display: inline-block;
+}
+.lnk{
+  color: #ffa700;
+  text-align: center;
+  display: block;
+}
+
+.footer .lnk {
+  display: initial; 
+  padding: 10px;
+}
+@media only screen and (min-width:  20em) and (max-width: 48.75em){
+    header{
+      background-color: rgba(0,0,0,.5);
+    }
+
+    .flex-mobile{
+        flex-direction:column;
+    }
+    #big-date-text{
+      padding-top:20px;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    #appname{
+      font-size: 2.4rem;
+    }
+    #your-time{
+      font-size: 1.5rem;
+      padding-bottom: 15px;
+    }
+    #view-container{
+      padding:  50px 30px 30px;
+    }
+    .appBtn{
+        margin:   0 auto;
+        margin-top: 20px;
+        display:  block;  
+        padding:  15px;
+        min-width: 60px;
+    }
+    .appInput{
+        flex:1;
+        margin-top: 20px;
+    }
+
+    .appBtn:disabled{
+      opacity: 0.5;
+      background-color: #728271;
+    }
+    .error-message{
+      margin-top: 20px;
+      font-size: 1.5rem;
+      max-width: 250px;
+      padding:10px;
+    }
+    #cityTextBox{
+      margin-top: 20px;
+    }
+
+    #cityTextBox a{
+      font-size: 1.5rem;
+      color: #bd4722;
+    }
+
+    #actions input{
+      margin-top: 0;
+    }
+
+    #actions .appBtn {
+      border-radius: 0;
+      padding: 10px;
+    }
+    .align-right{
+      display: block;
+      text-align: right;
+    }
+    #locationName{
+      font-size: 2.3rem;
+    }
+  .width-header-element{
+    min-width:  300px;
+  }
+}
+
+@media only screen and (min-width:  48.75em){
+   
+   header .aligner:nth-child(1) {
+      padding: 30px;
+   }
+   #appname{ 
+      font-size: 3rem;
+   }
+   .width-header-element {
+      min-width: 180px; 
+      max-width: 180px;
+   }
+   .appBtn{
+        margin-right: auto;
+        margin-top: 20px;
+        padding:  20px;
+        min-width: 60px;
+        font-size: 2rem; 
+    }
+    .appInput{
+      min-width: 620px;
+        /*margin-left: auto;*/
+        /*max-width: 700px;*/
+        /*margin-top: 20px;*/
+    }
+    .box-left{
+      margin: 0 auto;
+      max-width: 650px;
+      min-width: 650px;
+    }
+
+    .box-right{
+      max-width: 650px;
+      min-width: 650px;
+    }    
+
+    #locationName{
+      font-size: 3rem;
+    }
+
+    .location-results {
+      padding-top: 30px;
+    }
+    #view-container {
+      padding-top: 100px;
+    }
+
+    #item-results li {
+      font-size: 1.8rem;
+    }
+    #item-results {
+      max-width: 250px;
+    }
+    #item-results li strong {
+      min-width: 150px;
+    }
+    .lnk{
+      cursor: pointer;
+      max-width: 400px;
+      padding: 10px;
+      background-color: rgba(3, 29, 86, 0.7);
+    }
+}
